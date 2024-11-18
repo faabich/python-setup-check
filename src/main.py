@@ -1,12 +1,8 @@
+operand1 = operand2 = None
+operator = None
+
 def main():
-    # Get first operand from the user
-    operand1 = float(input("Enter the first operand: "))
-
-    # Get the operator from the user
-    operator = input("Enter an operator (+, -, *, /): ")
-
-    # Get second operand from the user
-    operand2 = float(input("Enter the second operand: "))
+    ask_user_input()
 
     # Perform the operation based on the operator
     if operator == '+':
@@ -25,7 +21,20 @@ def main():
         return
 
     # Print the result
-    print("Result:", result)
+    print("Resultat: ", result)
+
+def ask_user_input():
+    # Get first operand from the user
+    global operand1
+    operand1 = float(input("Enter the first operand: "))
+
+    # Get the operator from the user
+    global operator
+    operator = input("Enter an operator (+, -, *, /): ")
+
+    # Get second operand from the user
+    global operand2
+    operand2 = float(input("Enter the second operand: "))
 
 
 # Call the main function to run the program
