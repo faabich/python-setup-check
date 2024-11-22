@@ -2,11 +2,10 @@ operand1 = operand2 = None
 operator = None
 
 def main():
+    global operand1, operand2, operator
     ask_user_input()
-    result = calculate(operand1, operator, operand2);
-
-    # Print the result
-    print("Resultat: ", result)
+    result = calculate(operand1, operator, operand2)
+    display_result(operand1, operator, operand2, result)
 
 def ask_user_input():
     # Get first operand from the user
@@ -39,6 +38,9 @@ def calculate(operand1, operator, operand2):
             print("Invalid operator.")
             return
     return result
+
+def display_result(operand1, operator, operand2, result):
+    print(operand1,operator, operand2,"=", result)
 
 # Call the main function to run the program
 main()
